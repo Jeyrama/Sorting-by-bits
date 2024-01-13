@@ -28,3 +28,20 @@ Example:
 
 
 // Solution
+
+function sortByBit(arr) {
+
+  function bits(num) {
+      return Array.from((num).toString(2), (a)=>Number(a)).reduce((a,b) => a + b);
+  };
+
+  function cmp (a, b) {
+     let result = bits(a) - bits(b);
+     if (result != 0) {
+         return result;
+     } else {
+         return a - b;
+     };
+  };
+  arr.sort(cmp);
+}

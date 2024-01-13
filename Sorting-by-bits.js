@@ -45,3 +45,5 @@ function sortByBit(arr) {
   };
   arr.sort(cmp);
 }
+
+// or

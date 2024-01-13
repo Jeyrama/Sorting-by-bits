@@ -47,3 +47,8 @@ function sortByBit(arr) {
 }
 
 // or
+
+const sortByBit = (arr) => {
+  const bitCount = (n) => n.toString(2).replace(/0/g, '').length;
+  return arr.sort((a, b) => bitCount(a) - bitCount(b) || a - b);
+}
